@@ -42,6 +42,8 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::apiResource('etablissements', EtablissementController::class);
 
         // Personnels
+        Route::delete('personnels/destroy-all', [PersonnelController::class, 'destroyAll']);
+        Route::post('personnels/import', [PersonnelController::class, 'import']);
         Route::apiResource('personnels', PersonnelController::class);
 
         // Diplomes
@@ -51,9 +53,11 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::apiResource('specialites', SpecialiteController::class);
 
         // Conges
+        Route::delete('conges/destroy-all', [CongeController::class, 'destroyAll']);
         Route::apiResource('conges', CongeController::class);
 
         // Absences
+        Route::delete('absences/destroy-all', [AbsenceController::class, 'destroyAll']);
         Route::apiResource('absences', AbsenceController::class);
 
         // Users

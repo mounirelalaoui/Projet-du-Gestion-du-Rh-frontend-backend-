@@ -3,34 +3,44 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+use App\Models\Absence;
+use App\Models\Personnel;
 
 class AbsenceSeeder extends Seeder
 {
     public function run(): void
     {
-        DB::table('absences')->insert([
+        $personnelIds = Personnel::pluck('idPersonnel', 'matricule');
+        $absences = [
             [
                 'date_absence' => '2026-04-01',
                 'motif' => 'maladie',
-                'idPersonnel' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
+                'idPersonnel' => $personnelIds['FORM-001'] ?? null,
             ],
             [
                 'date_absence' => '2026-04-10',
                 'motif' => 'congé',
-                'idPersonnel' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
+                'idPersonnel' => $personnelIds['FORM-001'] ?? null,
             ],
             [
                 'date_absence' => '2026-04-15',
                 'motif' => 'absence injustifiée',
-                'idPersonnel' => 2,
-                'created_at' => now(),
-                'updated_at' => now(),
+                'idPersonnel' => $personnelIds['FORM-002'] ?? null,
             ]
-        ]);
+        ];
+
+        foreach ($absences as $absence) {
+            if (!$absence['idPersonnel']) {
+                continue;
+            }
+
+            Absence::updateOrCreate(
+                [
+                    'idPersonnel' => $absence['idPersonnel'],
+                    'date_absence' => $absence['date_absence'],
+                ],
+                $absence
+            );
+        }
     }
 }

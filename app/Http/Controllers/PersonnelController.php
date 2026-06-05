@@ -100,7 +100,37 @@ class PersonnelController extends Controller
      */
     public function destroy(string $id)
     {
-         Personnel::destroy($id);
-         return response()->json(['message'=>'deleted']);
+         $p = Personnel::findOrFail($id);
+         $p->delete();
+         return $this->success(null, 'Personnel supprimé avec succès');
+    }
+
+    /**
+     * Import multiple personnels.
+     */
+    public function import(Request $request)
+    {
+        $request->validate([
+            'personnels' => 'required|array',
+        ]);
+
+        $inserted = [];
+        \Illuminate\Support\Facades\DB::transaction(function() use ($request, &$inserted) {
+            foreach ($request->personnels as $data) {
+                $personnel = Personnel::create($data);
+                $inserted[] = $personnel;
+            }
+        });
+
+        return $this->success(\App\Http\Resources\PersonnelResource::collection($inserted), 'Import réussi');
+    }
+
+    /**
+     * Remove all resources from storage.
+     */
+    public function destroyAll()
+    {
+        Personnel::query()->delete();
+        return $this->success(null, 'Tous les personnels ont été supprimés avec succès');
     }
 }

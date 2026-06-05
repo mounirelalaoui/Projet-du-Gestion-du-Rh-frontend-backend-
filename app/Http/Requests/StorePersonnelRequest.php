@@ -23,14 +23,22 @@ class StorePersonnelRequest extends FormRequest
     public function rules(): array
     {
         return [
+              'matricule' => 'nullable|string|max:50|unique:personnels,matricule',
               'nom' => 'required|string|max:255',
               'prenom' => 'required|string|max:255',
               'cin' => 'required|unique:personnels,cin',
               'type_personnel' => 'required|in:formateur,administratif',
               'statut' => 'required|in:permanent,vacataire',
               'date_naissance' => 'nullable|date',
+              'situation_familiale' => 'nullable|string|max:100',
+              'adresse_actuelle' => 'nullable|string|max:500',
               'telephone' => 'nullable|string|max:20',
-              'idEtab' => 'required|exists:etablissements,idEtab',
+              'grade' => 'nullable|string|max:100',
+              'echelon' => 'nullable|string|max:50',
+              'fonction' => 'nullable|string|max:255',
+              'contact_nom' => 'nullable|string|max:255',
+              'contact_telephone' => 'nullable|string|max:20',
+              'idEtab' => 'nullable|exists:etablissements,idEtab',
               'specialites' => 'nullable|array',
               'specialites.*' => 'exists:specialites,idSpecialite',
               'diplomes' => 'nullable|array',

@@ -83,4 +83,13 @@ class AbsenceController extends Controller
         Absence::destroy($id);
         return response()->json(['message'=>'deleted']);
     }
+
+    /**
+     * Remove all resources from storage.
+     */
+    public function destroyAll()
+    {
+        Absence::query()->delete();
+        return response()->json(['message'=>'All deleted']);
+    }
 }

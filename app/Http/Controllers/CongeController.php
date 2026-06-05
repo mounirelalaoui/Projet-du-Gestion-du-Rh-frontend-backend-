@@ -82,4 +82,13 @@ class CongeController extends Controller
         Conge::destroy($id);
         return response()->json(['message'=>'deleted']);
     }
+
+    /**
+     * Remove all resources from storage.
+     */
+    public function destroyAll()
+    {
+        Conge::query()->delete();
+        return response()->json(['message'=>'All deleted']);
+    }
 }

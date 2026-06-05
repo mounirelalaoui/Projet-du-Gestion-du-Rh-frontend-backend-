@@ -1,0 +1,1001 @@
+{
+  "GeneratedAt": "2026-05-20 22:43:28",
+  "SourcePath": "C:\\xampp\\htdocs\\Projet-du-Gestion-du-Rh",
+  "OutputPath": "C:\\xampp\\htdocs\\Projet-du-Gestion-du-Rh\\artifacts\\project-automation\\20260520-224322",
+  "ProjectName": "Projet-du-Gestion-du-Rh",
+  "Stack": {
+    "Frameworks": [
+      "Laravel",
+      "Node",
+      "PHP",
+      "React",
+      "Vite"
+    ],
+    "Languages": [
+      "CSS",
+      "HTML",
+      "JavaScript",
+      "PHP",
+      "Python"
+    ],
+    "PackageManagers": [
+      "composer",
+      "npm"
+    ]
+  },
+  "Projects": [
+    {
+      "RootPath": "C:\\xampp\\htdocs\\Projet-du-Gestion-du-Rh",
+      "RelativeRoot": ".",
+      "Role": "Backend",
+      "Frameworks": [
+        "Laravel",
+        "PHP"
+      ],
+      "Languages": [
+        "PHP",
+        "Python"
+      ],
+      "PackageManagers": "composer",
+      "Dependencies": {
+        "JavaScript": null,
+        "PHP": [
+          "fakerphp/faker",
+          "laravel/breeze",
+          "laravel/framework",
+          "laravel/pail",
+          "laravel/pint",
+          "laravel/sail",
+          "laravel/sanctum",
+          "laravel/tinker",
+          "maatwebsite/excel",
+          "mockery/mockery",
+          "mpdf/mpdf",
+          "nunomaduro/collision",
+          "php",
+          "phpunit/phpunit"
+        ],
+        "Python": null,
+        "Java": null
+      },
+      "Categories": {
+        "Services": {
+          "Count": 1,
+          "Sample": "services\\password_service.py"
+        },
+        "Config": {
+          "Count": 15,
+          "Sample": [
+            "composer.json",
+            "config\\app.php",
+            "config\\auth.php",
+            "config\\cache.php",
+            "config\\cors.php",
+            "config\\database.php",
+            "config\\excel.php",
+            "config\\filesystems.php",
+            "config\\logging.php",
+            "config\\mail.php",
+            "config\\queue.php",
+            "config\\sanctum.php",
+            "config\\services.php",
+            "config\\session.php",
+            "tools\\ProjectAutomation\\Config\\ProjectAutomation.Config.psd1"
+          ]
+        },
+        "Components": {
+          "Count": 0,
+          "Sample": null
+        },
+        "Middlewares": {
+          "Count": 4,
+          "Sample": [
+            "app\\Http\\Middleware\\CheckRole.php",
+            "app\\Http\\Middleware\\CorsMiddleware.php",
+            "app\\Http\\Middleware\\EnsureEmailIsVerified.php",
+            "app\\Http\\Middleware\\RoleMiddleware.php"
+          ]
+        },
+        "Models": {
+          "Count": 8,
+          "Sample": [
+            "app\\Models\\Absence.php",
+            "app\\Models\\Conge.php",
+            "app\\Models\\Diplome.php",
+            "app\\Models\\Etablissement.php",
+            "app\\Models\\Personnel.php",
+            "app\\Models\\Seance.php",
+            "app\\Models\\Specialite.php",
+            "app\\Models\\User.php"
+          ]
+        },
+        "Routes": {
+          "Count": 4,
+          "Sample": [
+            "routes\\api.php",
+            "routes\\auth.php",
+            "routes\\console.php",
+            "routes\\web.php"
+          ]
+        },
+        "Hooks": {
+          "Count": 0,
+          "Sample": null
+        },
+        "Api": {
+          "Count": 1,
+          "Sample": "routes\\api.php"
+        },
+        "Controllers": {
+          "Count": 21,
+          "Sample": [
+            "app\\Http\\Controllers\\AbsenceController.php",
+            "app\\Http\\Controllers\\Auth\\AuthenticatedSessionController.php",
+            "app\\Http\\Controllers\\Auth\\EmailVerificationNotificationController.php",
+            "app\\Http\\Controllers\\Auth\\NewPasswordController.php",
+            "app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php",
+            "app\\Http\\Controllers\\Auth\\RegisteredUserController.php",
+            "app\\Http\\Controllers\\Auth\\VerifyEmailController.php",
+            "app\\Http\\Controllers\\AuthController.php",
+            "app\\Http\\Controllers\\CongeController.php",
+            "app\\Http\\Controllers\\Controller.php",
+            "app\\Http\\Controllers\\DashboardController.php",
+            "app\\Http\\Controllers\\DiplomeController.php",
+            "app\\Http\\Controllers\\EmploiTempsController.php",
+            "app\\Http\\Controllers\\EtablissementController.php",
+            "app\\Http\\Controllers\\ImportEmploiController.php",
+            "app\\Http\\Controllers\\PersonnelController.php",
+            "app\\Http\\Controllers\\PlanningImportController.php",
+            "app\\Http\\Controllers\\ProfileController.php",
+            "app\\Http\\Controllers\\SeanceController.php",
+            "app\\Http\\Controllers\\SpecialiteController.php"
+          ]
+        }
+      },
+      "CriticalFiles": [
+        ".editorconfig",
+        ".gitattributes",
+        ".gitignore",
+        "artisan",
+        "composer.json",
+        "composer.lock",
+        "phpunit.xml",
+        "README.md",
+        "setup.ps1",
+        "setup.sh"
+      ],
+      "EnvironmentFiles": ".env",
+      "ConfigFiles": [
+        "composer.json",
+        "tools\\ProjectAutomation\\Config\\ProjectAutomation.Config.psd1"
+      ],
+      "KeepDirectories": [
+        "app",
+        "bootstrap",
+        "config",
+        "database",
+        "public",
+        "resources",
+        "routes",
+        "services",
+        "tests"
+      ],
+      "KeepFiles": [
+        ".editorconfig",
+        ".gitattributes",
+        ".gitignore",
+        "artisan",
+        "composer.json",
+        "composer.lock",
+        "phpunit.xml",
+        "README.md",
+        "setup.ps1",
+        "setup.sh"
+      ],
+      "NestedRoots": "C:\\xampp\\htdocs\\Projet-du-Gestion-du-Rh\\ofppt-rh-frontend",
+      "LaunchCommands": [
+        {
+          "Step": "Install PHP dependencies",
+          "Command": "composer install"
+        },
+        {
+          "Step": "Prepare environment",
+          "Command": "Copy-Item .env.example .env"
+        },
+        {
+          "Step": "Generate app key",
+          "Command": "php artisan key:generate"
+        },
+        {
+          "Step": "Run migrations",
+          "Command": "php artisan migrate"
+        },
+        {
+          "Step": "Start backend",
+          "Command": "php artisan serve"
+        }
+      ],
+      "Issues": [
+        {
+          "Severity": "Medium",
+          "Code": "MissingEnvExample",
+          "Message": "A .env file exists without a matching .env.example template.",
+          "Path": ".env",
+          "Project": "."
+        },
+        {
+          "Severity": "High",
+          "Code": "MissingLaravelView",
+          "Message": "Route references missing Blade view \"welcome\".",
+          "Path": "routes\\web.php",
+          "Project": "."
+        },
+        {
+          "Severity": "Medium",
+          "Code": "NestedFrontendComposerScripts",
+          "Message": "composer.json references npm commands in a directory without package.json while a nested frontend project exists.",
+          "Path": "composer.json",
+          "Project": "."
+        }
+      ],
+      "FileCount": 149
+    },
+    {
+      "RootPath": "C:\\xampp\\htdocs\\Projet-du-Gestion-du-Rh\\ofppt-rh-frontend",
+      "RelativeRoot": "ofppt-rh-frontend",
+      "Role": "FullStack",
+      "Frameworks": [
+        "Node",
+        "React",
+        "Vite"
+      ],
+      "Languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "PackageManagers": [
+        "composer",
+        "npm"
+      ],
+      "Dependencies": {
+        "JavaScript": [
+          "@emailjs/browser",
+          "@eslint/js",
+          "@tailwindcss/vite",
+          "@types/node",
+          "@types/react",
+          "@types/react-dom",
+          "@vitejs/plugin-react",
+          "autoprefixer",
+          "axios",
+          "babel-plugin-react-compiler",
+          "date-fns",
+          "eslint",
+          "eslint-plugin-react",
+          "eslint-plugin-react-hooks",
+          "exceljs",
+          "jspdf",
+          "jspdf-autotable",
+          "lucide-react",
+          "postcss",
+          "react",
+          "react-dom",
+          "react-hot-toast",
+          "react-router-dom",
+          "recharts",
+          "tailwindcss",
+          "vite"
+        ],
+        "PHP": null,
+        "Python": null,
+        "Java": null
+      },
+      "Categories": {
+        "Services": {
+          "Count": 10,
+          "Sample": [
+            "src\\services\\api.js",
+            "src\\services\\authService.js",
+            "src\\services\\axiosInstance.js",
+            "src\\services\\crudServices.js",
+            "src\\services\\emailService.js",
+            "src\\services\\ExcelService.js",
+            "src\\services\\googleFormsService.js",
+            "src\\services\\notificationStore.js",
+            "src\\services\\pdfService.js",
+            "src\\services\\scheduleService.js"
+          ]
+        },
+        "Config": {
+          "Count": 4,
+          "Sample": [
+            "composer.json",
+            "eslint.config.js",
+            "package.json",
+            "vite.config.js"
+          ]
+        },
+        "Components": {
+          "Count": 24,
+          "Sample": [
+            "src\\components\\AuthGuard.jsx",
+            "src\\components\\common\\ConfirmDialog.jsx",
+            "src\\components\\common\\CrudForm.jsx",
+            "src\\components\\common\\CrudList.jsx",
+            "src\\components\\common\\DetailRow.jsx",
+            "src\\components\\common\\DynamicFilters.jsx",
+            "src\\components\\common\\ExcelImportModal.jsx",
+            "src\\components\\common\\index.jsx",
+            "src\\components\\common\\NotificationPanel.jsx",
+            "src\\components\\common\\PageHeader.jsx",
+            "src\\components\\common\\PersonnelForm.jsx",
+            "src\\components\\layout\\Footer.jsx",
+            "src\\components\\layout\\MainLayout.jsx",
+            "src\\components\\layout\\Navbar.jsx",
+            "src\\components\\layout\\Sidebar.jsx",
+            "src\\components\\ui\\Button.jsx",
+            "src\\components\\ui\\Card.jsx",
+            "src\\components\\ui\\ExportPDFButton.jsx",
+            "src\\components\\ui\\Input.jsx",
+            "src\\components\\ui\\Modal.jsx"
+          ]
+        },
+        "Middlewares": {
+          "Count": 0,
+          "Sample": null
+        },
+        "Models": {
+          "Count": 0,
+          "Sample": null
+        },
+        "Routes": {
+          "Count": 2,
+          "Sample": [
+            "src\\routes\\AppRoutes.jsx",
+            "src\\routes\\ProtectedRoute.jsx"
+          ]
+        },
+        "Hooks": {
+          "Count": 3,
+          "Sample": [
+            "src\\hooks\\useAuth.js",
+            "src\\hooks\\useDynamicFilters.js",
+            "src\\hooks\\useFetch.js"
+          ]
+        },
+        "Api": {
+          "Count": 0,
+          "Sample": null
+        },
+        "Controllers": {
+          "Count": 0,
+          "Sample": null
+        }
+      },
+      "CriticalFiles": [
+        ".gitignore",
+        "eslint.config.js",
+        "index.html",
+        "package-lock.json",
+        "package.json",
+        "README.md",
+        "vite.config.js"
+      ],
+      "EnvironmentFiles": ".env",
+      "ConfigFiles": [
+        "composer.json",
+        "eslint.config.js",
+        "package.json",
+        "vite.config.js"
+      ],
+      "KeepDirectories": [
+        "public",
+        "src"
+      ],
+      "KeepFiles": [
+        ".gitignore",
+        "eslint.config.js",
+        "index.html",
+        "package-lock.json",
+        "package.json",
+        "README.md",
+        "vite.config.js"
+      ],
+      "NestedRoots": null,
+      "LaunchCommands": [
+        {
+          "Step": "Install JavaScript dependencies",
+          "Command": "npm install"
+        },
+        {
+          "Step": "Start development server",
+          "Command": "npm run dev"
+        }
+      ],
+      "Issues": {
+        "Severity": "Medium",
+        "Code": "MissingEnvExample",
+        "Message": "A .env file exists without a matching .env.example template.",
+        "Path": "ofppt-rh-frontend\\.env",
+        "Project": "ofppt-rh-frontend"
+      },
+      "FileCount": 86
+    }
+  ],
+  "EnvironmentFiles": [
+    ".env",
+    "ofppt-rh-frontend\\.env"
+  ],
+  "CriticalFiles": [
+    ".editorconfig",
+    ".gitattributes",
+    ".gitignore",
+    "artisan",
+    "composer.json",
+    "composer.lock",
+    "ofppt-rh-frontend\\.gitignore",
+    "ofppt-rh-frontend\\eslint.config.js",
+    "ofppt-rh-frontend\\index.html",
+    "ofppt-rh-frontend\\package-lock.json",
+    "ofppt-rh-frontend\\package.json",
+    "ofppt-rh-frontend\\README.md",
+    "ofppt-rh-frontend\\vite.config.js",
+    "phpunit.xml",
+    "README.md",
+    "setup.ps1",
+    "setup.sh"
+  ],
+  "GeneratedArtifacts": {
+    "Directories": [
+      {
+        "Kind": "Generated",
+        "Name": ".git",
+        "RelativePath": ".git",
+        "FullPath": "C:\\xampp\\htdocs\\Projet-du-Gestion-du-Rh\\.git"
+      },
+      {
+        "Kind": "WorkspaceClutter",
+        "Name": ".postman",
+        "RelativePath": ".postman",
+        "FullPath": "C:\\xampp\\htdocs\\Projet-du-Gestion-du-Rh\\.postman"
+      },
+      {
+        "Kind": "WorkspaceClutter",
+        "Name": ".qodo",
+        "RelativePath": ".qodo",
+        "FullPath": "C:\\xampp\\htdocs\\Projet-du-Gestion-du-Rh\\.qodo"
+      },
+      {
+        "Kind": "Generated",
+        "Name": ".vscode",
+        "RelativePath": ".vscode",
+        "FullPath": "C:\\xampp\\htdocs\\Projet-du-Gestion-du-Rh\\.vscode"
+      },
+      {
+        "Kind": "WorkspaceClutter",
+        "Name": "artifacts",
+        "RelativePath": "artifacts",
+        "FullPath": "C:\\xampp\\htdocs\\Projet-du-Gestion-du-Rh\\artifacts"
+      },
+      {
+        "Kind": "WorkspaceClutter",
+        "Name": "cleaned_project_source",
+        "RelativePath": "cleaned_project_source",
+        "FullPath": "C:\\xampp\\htdocs\\Projet-du-Gestion-du-Rh\\cleaned_project_source"
+      },
+      {
+        "Kind": "WorkspaceClutter",
+        "Name": "docs",
+        "RelativePath": "docs",
+        "FullPath": "C:\\xampp\\htdocs\\Projet-du-Gestion-du-Rh\\docs"
+      },
+      {
+        "Kind": "WorkspaceClutter",
+        "Name": "postman",
+        "RelativePath": "postman",
+        "FullPath": "C:\\xampp\\htdocs\\Projet-du-Gestion-du-Rh\\postman"
+      },
+      {
+        "Kind": "Generated",
+        "Name": "vendor",
+        "RelativePath": "vendor",
+        "FullPath": "C:\\xampp\\htdocs\\Projet-du-Gestion-du-Rh\\vendor"
+      },
+      {
+        "Kind": "Generated",
+        "Name": "logs",
+        "RelativePath": "storage\\logs",
+        "FullPath": "C:\\xampp\\htdocs\\Projet-du-Gestion-du-Rh\\storage\\logs"
+      },
+      {
+        "Kind": "Generated",
+        "Name": "cache",
+        "RelativePath": "storage\\framework\\cache",
+        "FullPath": "C:\\xampp\\htdocs\\Projet-du-Gestion-du-Rh\\storage\\framework\\cache"
+      },
+      {
+        "Kind": "Generated",
+        "Name": ".git",
+        "RelativePath": "ofppt-rh-frontend\\.git",
+        "FullPath": "C:\\xampp\\htdocs\\Projet-du-Gestion-du-Rh\\ofppt-rh-frontend\\.git"
+      },
+      {
+        "Kind": "Generated",
+        "Name": "dist",
+        "RelativePath": "ofppt-rh-frontend\\dist",
+        "FullPath": "C:\\xampp\\htdocs\\Projet-du-Gestion-du-Rh\\ofppt-rh-frontend\\dist"
+      },
+      {
+        "Kind": "Generated",
+        "Name": "node_modules",
+        "RelativePath": "ofppt-rh-frontend\\node_modules",
+        "FullPath": "C:\\xampp\\htdocs\\Projet-du-Gestion-du-Rh\\ofppt-rh-frontend\\node_modules"
+      },
+      {
+        "Kind": "Generated",
+        "Name": "cache",
+        "RelativePath": "bootstrap\\cache",
+        "FullPath": "C:\\xampp\\htdocs\\Projet-du-Gestion-du-Rh\\bootstrap\\cache"
+      }
+    ],
+    "Files": [
+      {
+        "Kind": "GeneratedFile",
+        "Name": ".phpunit.result.cache",
+        "RelativePath": ".phpunit.result.cache",
+        "FullPath": "C:\\xampp\\htdocs\\Projet-du-Gestion-du-Rh\\.phpunit.result.cache"
+      },
+      {
+        "Kind": "GeneratedFile",
+        "Name": "cleaned_project_source.zip",
+        "RelativePath": "cleaned_project_source.zip",
+        "FullPath": "C:\\xampp\\htdocs\\Projet-du-Gestion-du-Rh\\cleaned_project_source.zip"
+      }
+    ]
+  },
+  "Issues": [
+    {
+      "Severity": "Medium",
+      "Code": "MissingEnvExample",
+      "Message": "A .env file exists without a matching .env.example template.",
+      "Path": ".env",
+      "Project": "."
+    },
+    {
+      "Severity": "High",
+      "Code": "MissingLaravelView",
+      "Message": "Route references missing Blade view \"welcome\".",
+      "Path": "routes\\web.php",
+      "Project": "."
+    },
+    {
+      "Severity": "Medium",
+      "Code": "NestedFrontendComposerScripts",
+      "Message": "composer.json references npm commands in a directory without package.json while a nested frontend project exists.",
+      "Path": "composer.json",
+      "Project": "."
+    },
+    {
+      "Severity": "Medium",
+      "Code": "MissingEnvExample",
+      "Message": "A .env file exists without a matching .env.example template.",
+      "Path": "ofppt-rh-frontend\\.env",
+      "Project": "ofppt-rh-frontend"
+    },
+    {
+      "Severity": "Low",
+      "Code": "GeneratedDirectoryPresent",
+      "Message": "Detected removable directory: .git",
+      "Path": ".git",
+      "Project": "."
+    },
+    {
+      "Severity": "Info",
+      "Code": "GeneratedDirectoryPresent",
+      "Message": "Detected removable directory: .postman",
+      "Path": ".postman",
+      "Project": "."
+    },
+    {
+      "Severity": "Info",
+      "Code": "GeneratedDirectoryPresent",
+      "Message": "Detected removable directory: .qodo",
+      "Path": ".qodo",
+      "Project": "."
+    },
+    {
+      "Severity": "Low",
+      "Code": "GeneratedDirectoryPresent",
+      "Message": "Detected removable directory: .vscode",
+      "Path": ".vscode",
+      "Project": "."
+    },
+    {
+      "Severity": "Info",
+      "Code": "GeneratedDirectoryPresent",
+      "Message": "Detected removable directory: artifacts",
+      "Path": "artifacts",
+      "Project": "."
+    },
+    {
+      "Severity": "Info",
+      "Code": "GeneratedDirectoryPresent",
+      "Message": "Detected removable directory: cleaned_project_source",
+      "Path": "cleaned_project_source",
+      "Project": "."
+    },
+    {
+      "Severity": "Info",
+      "Code": "GeneratedDirectoryPresent",
+      "Message": "Detected removable directory: docs",
+      "Path": "docs",
+      "Project": "."
+    },
+    {
+      "Severity": "Info",
+      "Code": "GeneratedDirectoryPresent",
+      "Message": "Detected removable directory: postman",
+      "Path": "postman",
+      "Project": "."
+    },
+    {
+      "Severity": "Low",
+      "Code": "GeneratedDirectoryPresent",
+      "Message": "Detected removable directory: vendor",
+      "Path": "vendor",
+      "Project": "."
+    },
+    {
+      "Severity": "Low",
+      "Code": "GeneratedDirectoryPresent",
+      "Message": "Detected removable directory: storage\\logs",
+      "Path": "storage\\logs",
+      "Project": "."
+    },
+    {
+      "Severity": "Low",
+      "Code": "GeneratedDirectoryPresent",
+      "Message": "Detected removable directory: storage\\framework\\cache",
+      "Path": "storage\\framework\\cache",
+      "Project": "."
+    },
+    {
+      "Severity": "Low",
+      "Code": "GeneratedDirectoryPresent",
+      "Message": "Detected removable directory: ofppt-rh-frontend\\.git",
+      "Path": "ofppt-rh-frontend\\.git",
+      "Project": "."
+    },
+    {
+      "Severity": "Low",
+      "Code": "GeneratedDirectoryPresent",
+      "Message": "Detected removable directory: ofppt-rh-frontend\\dist",
+      "Path": "ofppt-rh-frontend\\dist",
+      "Project": "."
+    },
+    {
+      "Severity": "Low",
+      "Code": "GeneratedDirectoryPresent",
+      "Message": "Detected removable directory: ofppt-rh-frontend\\node_modules",
+      "Path": "ofppt-rh-frontend\\node_modules",
+      "Project": "."
+    },
+    {
+      "Severity": "Low",
+      "Code": "GeneratedDirectoryPresent",
+      "Message": "Detected removable directory: bootstrap\\cache",
+      "Path": "bootstrap\\cache",
+      "Project": "."
+    },
+    {
+      "Severity": "Low",
+      "Code": "GeneratedFilePresent",
+      "Message": "Detected removable file: .phpunit.result.cache",
+      "Path": ".phpunit.result.cache",
+      "Project": "."
+    },
+    {
+      "Severity": "Low",
+      "Code": "GeneratedFilePresent",
+      "Message": "Detected removable file: cleaned_project_source.zip",
+      "Path": "cleaned_project_source.zip",
+      "Project": "."
+    }
+  ],
+  "LaunchPlans": [
+    {
+      "Project": ".",
+      "Role": "Backend",
+      "Commands": [
+        {
+          "Step": "Install PHP dependencies",
+          "Command": "composer install"
+        },
+        {
+          "Step": "Prepare environment",
+          "Command": "Copy-Item .env.example .env"
+        },
+        {
+          "Step": "Generate app key",
+          "Command": "php artisan key:generate"
+        },
+        {
+          "Step": "Run migrations",
+          "Command": "php artisan migrate"
+        },
+        {
+          "Step": "Start backend",
+          "Command": "php artisan serve"
+        }
+      ]
+    },
+    {
+      "Project": "ofppt-rh-frontend",
+      "Role": "FullStack",
+      "Commands": [
+        {
+          "Step": "Install JavaScript dependencies",
+          "Command": "npm install"
+        },
+        {
+          "Step": "Start development server",
+          "Command": "npm run dev"
+        }
+      ]
+    }
+  ],
+  "Workspace": {
+    "FileCount": 235,
+    "TotalBytes": 1283171.0,
+    "HumanSize": "1.22 MB",
+    "ProjectRoots": 2
+  },
+  "Outputs": {
+    "CleanedSourcePath": "C:\\xampp\\htdocs\\Projet-du-Gestion-du-Rh\\artifacts\\project-automation\\20260520-224322\\cleaned_project_source",
+    "ZipPath": "C:\\xampp\\htdocs\\Projet-du-Gestion-du-Rh\\artifacts\\project-automation\\20260520-224322\\cleaned_project_source.zip",
+    "FileCount": 222,
+    "TotalBytes": 1197351.0,
+    "HumanSize": "1.14 MB",
+    "Tree": [
+      "app/",
+      "  Exceptions/",
+      "    Handler.php",
+      "  Helpers/",
+      "    ApiResponse.php",
+      "  Http/",
+      "    Controllers/",
+      "      Auth/",
+      "      AbsenceController.php",
+      "      AuthController.php",
+      "      CongeController.php",
+      "      Controller.php",
+      "      DashboardController.php",
+      "      DiplomeController.php",
+      "      EmploiTempsController.php",
+      "      EtablissementController.php",
+      "      ImportEmploiController.php",
+      "      PersonnelController.php",
+      "      PlanningImportController.php",
+      "      ProfileController.php",
+      "      SeanceController.php",
+      "      SpecialiteController.php",
+      "      UserController.php",
+      "    Middleware/",
+      "      CheckRole.php",
+      "      CorsMiddleware.php",
+      "      EnsureEmailIsVerified.php",
+      "      RoleMiddleware.php",
+      "    Requests/",
+      "      StoreAbsenceRequest.php",
+      "      StoreCongeRequest.php",
+      "      StoreDiplomeRequest.php",
+      "      StoreEtablissementRequest.php",
+      "      StorePersonnelRequest.php",
+      "      StoreSpecialiteRequest.php",
+      "      StoreUserRequest.php",
+      "      UpdateAbsenceRequest.php",
+      "      UpdateCongeRequest.php",
+      "      UpdateDiplomeRequest.php",
+      "      UpdateEtablissementRequest.php",
+      "      UpdatePersonnelRequest.php",
+      "      UpdateSpecialiteRequest.php",
+      "      UpdateUserRequest.php",
+      "    Resources/",
+      "      AbsenceResource.php",
+      "      AdministratifResource.php",
+      "      CongeResource.php",
+      "      DiplomeResource.php",
+      "      EtablissementResource.php",
+      "      FormateurPermanentResource.php",
+      "      FormateurResource.php",
+      "      FormateurVacataireResource.php",
+      "      PersonnelResource.php",
+      "      SeanceResource.php",
+      "      SpecialiteResource.php",
+      "      UserResource.php",
+      "  Imports/",
+      "    EmploiTempsImport.php",
+      "  Models/",
+      "    Absence.php",
+      "    Conge.php",
+      "    Diplome.php",
+      "    Etablissement.php",
+      "    Personnel.php",
+      "    Seance.php",
+      "    Specialite.php",
+      "    User.php",
+      "  Providers/",
+      "    AppServiceProvider.php",
+      "  Traits/",
+      "    ApiResponds.php",
+      "bootstrap/",
+      "  cache/",
+      "    .gitignore",
+      "  app.php",
+      "  providers.php",
+      "config/",
+      "  app.php",
+      "  auth.php",
+      "  cache.php",
+      "  cors.php",
+      "  database.php",
+      "  excel.php",
+      "  filesystems.php",
+      "  logging.php",
+      "  mail.php",
+      "  queue.php",
+      "  sanctum.php",
+      "  services.php",
+      "  session.php",
+      "database/",
+      "  factories/",
+      "    UserFactory.php",
+      "  migrations/",
+      "    0001_01_01_000001_create_cache_table.php",
+      "    0001_01_01_000002_create_jobs_table.php",
+      "    2026_04_09_114128_create_etablissements_table.php",
+      "    2026_04_10_113955_create_specialites_table.php",
+      "    2026_04_11_004002_create_diplomes_table.php",
+      "    2026_04_11_004116_create_personnels_table.php",
+      "    2026_04_12_002824_create_users_table.php",
+      "    2026_04_12_002958_create_absences_table.php",
+      "    2026_04_12_113945_create_conges_table.php",
+      "    2026_04_13_114029_create_obtenir_table.php",
+      "    2026_04_13_114031_create_enseigner_table.php",
+      "    2026_04_15_082412_create_sessions_table.php",
+      "    2026_04_16_104242_create_personal_access_tokens_table.php",
+      "    2026_04_29_104428_add_matricule_and_creneaux_to_personnels_table.php",
+      "    2026_04_29_105626_make_personnel_fields_nullable_for_import.php",
+      "    2026_04_29_110004_fix_user_roles_enum.php",
+      "    2026_04_29_190724_create_seances_table.php",
+      "    2026_04_30_064302_update_seances_table_to_timetable_schema.php",
+      "  schema/",
+      "    mysql-schema.sql",
+      "  seeders/",
+      "    AbsenceSeeder.php",
+      "    AdminUserSeeder.php",
+      "    DatabaseSeeder.php",
+      "    EtablissementSeeder.php",
+      "    PersonnelSeeder.php",
+      "    UserSeeder.php",
+      "  .gitignore",
+      "ofppt-rh-frontend/",
+      "  public/",
+      "    vite.svg",
+      "  src/",
+      "    {assets/",
+      "      {images,icons},components/",
+      "    assets/",
+      "      react.svg",
+      "    components/",
+      "      common/",
+      "      layout/",
+      "      ui/",
+      "      AuthGuard.jsx",
+      "    context/",
+      "      AuthContext.jsx",
+      "      TimetableContext.jsx",
+      "    data/",
+      "    hooks/",
+      "      useAuth.js",
+      "      useDynamicFilters.js",
+      "      useFetch.js",
+      "    pages/",
+      "      Absences/",
+      "      Administratifs/",
+      "      Auth/",
+      "      Conges/",
+      "      Dashboard/",
+      "      Emploi/",
+      "      Formateurs/",
+      "      Personnel/",
+      "      Profile/",
+      "      Users/",
+      "    routes/",
+      "      AppRoutes.jsx",
+      "      ProtectedRoute.jsx",
+      "    services/",
+      "      api.js",
+      "      authService.js",
+      "      axiosInstance.js",
+      "      crudServices.js",
+      "      emailService.js",
+      "      ExcelService.js",
+      "      googleFormsService.js",
+      "      notificationStore.js",
+      "      pdfService.js",
+      "      scheduleService.js",
+      "    utils/",
+      "      constants.js",
+      "      helpers.js",
+      "    App.css",
+      "    App.jsx",
+      "    index.css",
+      "    main.jsx",
+      "  .env.example",
+      "  .gitignore",
+      "  eslint.config.js",
+      "  index.html",
+      "  package-lock.json",
+      "  package.json",
+      "  README.md",
+      "  vite.config.js",
+      "public/",
+      "  .htaccess",
+      "  favicon.ico",
+      "  index.php",
+      "  robots.txt",
+      "resources/",
+      "  views/",
+      "    .gitkeep",
+      "routes/",
+      "  api.php",
+      "  auth.php",
+      "  console.php",
+      "  web.php",
+      "services/",
+      "  password_service.py",
+      "storage/",
+      "  app/",
+      "    private/",
+      "      .gitignore",
+      "    public/",
+      "      .gitignore",
+      "    .gitignore",
+      "  framework/",
+      "    cache/",
+      "      data/",
+      "      .gitignore",
+      "    sessions/",
+      "      .gitignore",
+      "    testing/",
+      "      .gitignore",
+      "    views/",
+      "      .gitignore",
+      "    .gitignore",
+      "  logs/",
+      "    .gitignore",
+      "tests/",
+      "  Feature/",
+      "  Unit/",
+      "    ExampleTest.php",
+      "  TestCase.php",
+      ".editorconfig",
+      ".env.example",
+      ".gitattributes",
+      ".gitignore",
+      "artisan",
+      "composer.json",
+      "composer.lock",
+      "phpunit.xml",
+      "README.md",
+      "setup.ps1",
+      "setup.sh"
+    ]
+  },
+  "Reports": {
+    "MarkdownPath": "C:\\xampp\\htdocs\\Projet-du-Gestion-du-Rh\\artifacts\\project-automation\\20260520-224322\\project-report.md",
+    "JsonPath": "C:\\xampp\\htdocs\\Projet-du-Gestion-du-Rh\\artifacts\\project-automation\\20260520-224322\\project-report.json"
+  }
+}

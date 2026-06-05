@@ -1,0 +1,43 @@
+# --- Laravel (Backend) ---
+/vendor
+/public/storage
+/public/hot
+/storage/*.key
+/storage/framework/cache/data/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/logs/*
+.env
+.env.backup
+.env.production
+/bootstrap/cache/*
+/node_modules
+npm-debug.log
+yarn-error.log
+.phpunit.result.cache
+
+# --- React/Vite (Frontend) ---
+# Si tu n'utilises pas de .gitignore séparé dans ton sous-module
+ofppt-rh-frontend/node_modules
+ofppt-rh-frontend/dist
+ofppt-rh-frontend/.env
+ofppt-rh-frontend/.env.local
+ofppt-rh-frontend/.env.development.local
+ofppt-rh-frontend/.env.test.local
+ofppt-rh-frontend/.env.production.local
+
+# --- IDE / Système (Windows/Mac) ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# --- Divers ---
+auth.json
+.phpunit.cache

@@ -14,7 +14,7 @@ class AuthController extends Controller
     // LOGIN
     public function login(Request $request)
     {
-        \Log::info('Login attempt hit', $request->only('email'));
+        \Log::info('Login attempt', ['email' => $request->email]);
         $request->validate([
            'email' => 'required|email',
            'password' => 'required'
@@ -41,7 +41,7 @@ class AuthController extends Controller
     // REGISTER
     public function register(Request $request)
     {
-        \Illuminate\Support\Facades\Log::info('Register method hit', $request->all());
+        \Illuminate\Support\Facades\Log::info('Register method hit', $request->only('username', 'email', 'Role'));
         $validated = $request->validate([
             'username' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
